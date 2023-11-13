@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>Framework CSS</title>
+</head>
+
+<body>
+    <nav class="navbar bg-aqua sticky-top">
+        <div class="container navbar-content px-2">
+            <a href="../index.html" class="navbar-brand fw-light fs-2">
+                <span class="fw-bold">Less</span>CSS
+            </a>
+            <ul class="navbar-nav">
+                <li>
+                    <a href="">Docs</a>
+                </li>
+                <li><a href="https://github.com/maria1sm/LessCSS">Download</a></li>
+                <li><a href="https://maria1sm.github.io/">About me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="grid-aside-layout-start container my-5">
+        <aside class="aside-grid fixed">
+            <nav>
+                <ul class="px-2">
+                    <li><a href="#position">Position</a></li>
+                    <li><a href="#flex">Flex</a></li>
+                    <li><a href="#cards">Cards</a></li>
+                    <li><a href="#nav">Navbar</a></li>
+                    <li><a href="#side-menu">Side Menus</a></li>
+                    <li><a href="#animations">Animations</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-grid">
+            <section id="introduction">
+                <div class="container px-2">
+                    <h3>Getting started with Less<span class="fw-regular">Css </span></h3>
+                    <p class="mt-2 fs-2 fw-light">
+                        LessCss is a CSS framework that will help you focus on HTML when creating your website. Build a
+                        consistent website and put your atention where it really matters, the content.
+                    </p>
+                </div>
+            </section>
+            <section id="position">
+                <div class="h-10vh"></div>
+                <div class="container mt-4 px-2 flex flex-column">
+                    <h3>Position</h3>
+                    <p class="fw-light">There are several ways you can configure the positioning of elements. This could
+                        be
+                        specially useful fot headers and footers, for example.</p>
+                    <ul class="ul-inside ms-3 fw-light">
+                        <li>Sticky</li>
+                        <li>Absolute</li>
+                        <li>Fixed</li>
+                        <li>Relative</li>
+                    </ul>
+                    <ul class="ul-inside mt-3 ms-3 fw-light">
+                        <span class="fw-bold">Arrangement</span>
+                        <li>Top</li>
+                        <li>Bottom</li>
+                        <li>Start</li>
+                        <li>End</li>
+                    </ul>
+                    <p class="fw-light">Additionally, you can use arrangement classes along a value to be more precise
+                        with
+                        positioning. These are some examples:</p>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded my-4 code-preview">
+                        <div class="code">
+                            <pre>
+                                <code>
+        &lt;div class=&quot;sticky-top&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sticky-bottom&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sticky-start&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sticky-end&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sticky top-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sticky start-0&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sticky start-50&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;sticky top-0 end-0&quot;&gt;&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="flex">
+                <div class="h-10vh"></div>
+                <div class="container mt-4 px-2 flex flex-column">
+                    <h3>Flex</h3>
+                    <p class="fw-light">The tradicional flex elements are also available. They work just like in css,
+                        but you
+                        can organize the content directly from your HTML. You can align text aswell.</p>
+                    <ul class="ul-inside ms-3 fw-light">
+                        <li>Justify Content</li>
+                        <li>Align-items</li>
+                    </ul>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded my-4 code-preview">
+                        <div class="flex flex-column bg-light-grey w-100 align-items-center p-3">
+                            <div class="flex flex-row justify-content-start gap-1 w-100 h-10vh">
+                                <div class="w-25 bg-dark text-light text-start">justify-content-start</div>
+                            </div>
+
+                            <div class="flex flex-row justify-content-center my-3 gap-1 w-100 h-10vh">
+                                <div class="w-25 bg-dark text-light text-center">justify-content-center</div>
+                            </div>
+
+                            <div class="flex flex-row justify-content-end gap-1 w-100 h-10vh">
+                                <div class="w-25 bg-dark text-light text-end">justify-content-end</div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+        &lt;div class=&quot;flex flex-column bg-light-grey w-100 align-items-center p-3&quot;&gt;
+            &lt;div class=&quot;flex flex-row justify-content-start gap-1 w-100 h-10vh&quot;&gt;
+                &lt;div class=&quot;w-25 bg-dark text-light text-start&quot;&gt;justify-content-start&lt;/div&gt;
+            &lt;/div&gt;
+        
+            &lt;div class=&quot;flex flex-row justify-content-center my-3 gap-1 w-100 h-10vh&quot;&gt;
+                &lt;div class=&quot;w-25 bg-dark text-light text-center&quot;&gt;justify-content-center&lt;/div&gt;
+            &lt;/div&gt;
+        
+            &lt;div class=&quot;flex flex-row justify-content-end gap-1 w-100 h-10vh&quot;&gt;
+                &lt;div class=&quot;w-25 bg-dark text-light text-end&quot;&gt;justify-content-end&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="cards">
+                <div class="h-10vh"></div>
+                <div class="container mt-4 px-2 flex flex-column">
+                    <h3>Cards</h3>
+                    <p class="fw-light">Discover the different combinations for creating cards</p>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded my-4 code-preview">
+                        <div class="card m-4 w-50">
+                            <div class="card-body">
+                                <h3 class="card-title">Card Title</h3>
+                                <h5 class="card-subtitle">Card Title</h5>
+                                <p class="card-text">Display here the main text of the card. The card size will resize
+                                    automatically. Any size for each text is supported.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+        &lt;div class=&quot;card w-50&quot;&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+                &lt;h3 class=&quot;card-title&quot;&gt;Card Title&lt;/h3&gt;
+                &lt;h5 class=&quot;card-subtitle&quot;&gt;Card Title&lt;/h5&gt;
+                &lt;p class=&quot;card-text&quot;&gt;Display here the main text of the card. The card size will resize
+                    automatically. Any size for each text is supported.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="cards2">
+                <div class="container mt-4 px-2 flex flex-column">
+                    <p class="fw-light">You can use the flex properties to place the image at the top, bottom, end
+                        or start of the card. By using the class card-img-position the borders will autocatically be
+                        rounded to fit the card shape.</p>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded my-4 code-preview">
+                        <div class="card m-4" style="width: 18rem;">
+                            <img src="https://placehold.jp/250x200.png" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">Card Title</h4>
+                                <p class="card-text">Display here the main text of the card. The card size will resize
+                                    automatically. Any size for each text is supported.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+        &lt;div class=&quot;card m-4&quot; style=&quot;width: 18rem;&quot;&gt;
+            &lt;img src=&quot;...&quot; class=&quot;card-img-top&quot; alt=&quot;&quot;&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+                &lt;h4 class=&quot;card-title&quot;&gt;Card Title&lt;/h4&gt;
+                &lt;p class=&quot;card-text&quot;&gt;Display here the main text of the card. The card size will resize
+                    automatically. Any size for each text is supported.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="cards3">
+                <div class="container mt-4 px-2 flex flex-column">
+                    <p class="fw-light">Wrap the cards with the card-group class that applies the flex-wrap property</p>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded my-4 code-preview">
+                        <div class="card-group">
+                            <div class="card m-4" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card Title</h4>
+                                    <p class="card-text">Display here the main text of the card. The card size will
+                                        resize
+                                        automatically. Any size for each text is supported.</p>
+                                </div>
+                                <img src="https://placehold.jp/250x200.png" class="card-img-bottom" alt="">
+                            </div>
+                            <div class="card m-4" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Card Title</h4>
+                                    <p class="card-text">Display here the main text of the card. The card size will
+                                        resize
+                                        automatically. Any size for each text is supported.</p>
+                                </div>
+                                <img src="https://placehold.jp/250x200.png" class="card-img-bottom" alt="">
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+        &lt;div class=&quot;card m-4&quot; style=&quot;width: 18rem;&quot;&gt;
+            &lt;img src=&quot;...&quot; class=&quot;card-img-top&quot; alt=&quot;&quot;&gt;
+            &lt;div class=&quot;card-body&quot;&gt;
+                &lt;h4 class=&quot;card-title&quot;&gt;Card Title&lt;/h4&gt;
+                &lt;p class=&quot;card-text&quot;&gt;Display here the main text of the card. The card size will resize
+                    automatically. Any size for each text is supported.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="nav">
+                <div class="h-10vh"></div>
+                <div class="container mt-4 px-2 flex flex-column">
+                    <h3>Navbar</h3>
+                    <p class="fw-light">The main Navbar features are the following:</p>
+                    <ul class="ul-inside ms-3 fw-light">
+                        <li>Aligned items</li>
+                        <li>Dropdown items</li>
+                        <li>Different positioning</li>
+                    </ul>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded my-4 code-preview">
+                        <nav class="navbar bg-light-grey m-3">
+                            <div class="container navbar-content">
+                                <a href="#nav" class="navbar-brand fw-light fs-2">
+                                    Navbar
+                                </a>
+                                <ul class="navbar-nav">
+                                    <li>
+                                        <a href="#nav">Item 1</a>
+                                    </li>
+                                    <li><a href="#nav">Item 2</a></li>
+                                    <li><a href="#nav">Item 3</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+        &lt;nav class=&quot;navbar bg-light-grey m-3&quot;&gt;
+        &lt;div class=&quot;container navbar-content&quot;&gt;
+            &lt;a href=&quot;../index.html&quot; class=&quot;navbar-brand fw-light fs-2&quot;&gt;
+                Navbar
+            &lt;/a&gt;
+            &lt;ul class=&quot;navbar-nav&quot;&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;&quot;&gt;Item 1&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;/nav&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="nav2">
+                <div class="container mt-4 px-2 flex flex-column">
+                    <h5>Dropdown Items</h5>
+                    <p class="fw-light">Here is an example for dropdown items. Keep in mind that you will need to use
+                        our
+                        javascript plugin.</p>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded my-4 code-preview">
+                        <nav class="navbar bg-light-grey m-3">
+                            <div class="container navbar-content">
+                                <a href="#nav2" class="navbar-brand fw-light fs-2">
+                                    Navbar
+                                </a>
+                                <ul class="navbar-nav">
+                                    <li>
+                                        <a href="#nav2">Item 1</a>
+                                    </li>
+                                    <li class="dropdown-list">
+                                        <a class="dropdown-toggler" href="#nav2">Dropdown <i class="arrow"></i></a>
+                                        <ul class="dropdown-content">
+                                            <li class="dropdown-item">Elemento 1</li>
+                                            <li class="dropdown-item">Elemento 2</li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#nav2">Item 3</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+        &lt;nav class=&quot;navbar bg-light-grey m-3&quot;&gt;
+        &lt;div class=&quot;container navbar-content&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;navbar-brand fw-light fs-2&quot;&gt;
+                Navbar
+            &lt;/a&gt;
+            &lt;ul class=&quot;navbar-nav&quot;&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#nav2&quot;&gt;Item 1&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;dropdown-list&quot;&gt;
+                    &lt;a class=&quot;dropdown-toggler&quot; href=&quot;#nav2&quot;&gt;Dropdown &lt;i class=&quot;arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;ul class=&quot;dropdown-content&quot;&gt;
+                        &lt;li class=&quot;dropdown-item&quot;&gt;Elemento 1&lt;/li&gt;
+                        &lt;li class=&quot;dropdown-item&quot;&gt;Elemento 2&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#nav2&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;/nav&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="side-menu">
+                <div class="h-10vh"></div>
+                <div class="container mt-4 px-2 flex flex-column">
+                    <h4>Side Menus</h4>
+                    <p class="fw-light">Here is a basic example of a side menu on the left side of the grid.
+                    </p>
+                    <div
+                        class="flex flex-column mx-auto w-100 h-100 align-items-center border border-rounded my-4 code-preview">
+                        <div class="grid-aside-layout-start h-20vh p-2">
+                            <aside class="aside-grid flex flex-column justify-content-center">
+                                <nav>
+                                    <ul class="px-2">
+                                        <li><a href="#side-menu">Element 1</a></li>
+                                        <li><a href="#side-menu">Element 2</a></li>
+                                        <li><a href="#side-menu">Element 3</a></li>
+                                    </ul>
+                                </nav>
+                            </aside>
+                            <main class="main-grid flex justify-content-center align-items-center">
+                                Main content
+                            </main>
+                        </div>
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+&lt;div class=&quot;grid-aside-layout-start h-20vh p-2&quot;&gt;
+    &lt;aside class=&quot;aside-grid flex flex-column justify-content-center&quot;&gt;
+        &lt;nav&gt;
+            &lt;ul class=&quot;px-2&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Element 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Element 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Element 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/aside&gt;
+    &lt;main class=&quot;main-grid flex justify-content-center align-items-center&quot;&gt;
+        Main content
+    &lt;/main&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="side-menu-2">
+                <div class="container mt-4 px-2 flex flex-column">
+                    <h5>Another side menu</h5>
+                    <p class="fw-light">A different layout for the side menu. Remember that it supports scroll on the y
+                        axis. Also, you don't have to change your HTML in case you want to change the side of the menu.
+                        Simply exchange "start" for "end".
+                    </p>
+                    <div
+                        class="flex flex-column mx-auto w-100 h-100 align-items-center border border-rounded my-4 code-preview">
+                        <div class="grid-aside-layout-end h-20vh p-2">
+                            <aside class="aside-grid flex flex-column justify-content-center">
+                                <nav>
+                                    <ul class="px-2">
+                                        <li><a href="#side-menu-2">Element 1</a></li>
+                                        <li><a href="#side-menu-2">Element 2</a></li>
+                                        <li><a href="#side-menu-2">Element 3</a></li>
+                                    </ul>
+                                </nav>
+                            </aside>
+                            <main class="main-grid flex justify-content-center align-items-center">
+                                Main content
+                            </main>
+                        </div>
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+&lt;div class=&quot;grid-aside-layout-start h-20vh p-2&quot;&gt;
+    &lt;aside class=&quot;aside-grid flex flex-column justify-content-center&quot;&gt;
+        &lt;nav&gt;
+            &lt;ul class=&quot;px-2&quot;&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Element 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Element 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;&quot;&gt;Element 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/aside&gt;
+    &lt;main class=&quot;main-grid flex justify-content-center align-items-center&quot;&gt;
+        Main content
+    &lt;/main&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="footer">
+                <div class="h-10vh"></div>
+                <div class="container mt-4 px-2 flex flex-column">
+                    <h4>Footer</h4>
+                    <p class="fw-light">There are endless combinations for creating different elements. Here is an
+                        example of a
+                        footer using the fixed positioning.
+                    </p>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded my-4 code-preview">
+                        <div class="m-3 w-100 px-2">
+                            <div class="flex flex-column w-100 align-items-center">
+                                <p class="bg-light-grey w-100 h-10vh text-center">
+                                    Your site
+                                </p>
+                                <footer class="bg-dark text-light w-100 p-4">
+                                    <div class="flex justify-content-around">
+                                        <div>
+                                            <div>
+                                                Footer Element 1
+                                            </div>
+                                            <div>
+                                                Footer Element 2
+                                            </div>
+                                            <div>
+                                                Footer Element 3
+                                            </div>
+                                        </div>
+                                        <div>Another Element</div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+&lt;div class=&quot;flex flex-column w-100 align-items-center&quot;&gt;
+    &lt;p class=&quot;bg-light-grey w-100 h-10vh text-center&quot;&gt;
+        Your site
+    &lt;/p&gt;
+    &lt;footer class=&quot;bg-dark text-light w-100 p-4&quot;&gt;
+        &lt;div class=&quot;flex justify-content-around&quot;&gt;
+            &lt;div&gt;
+                &lt;div&gt;
+                    Footer Element 1
+                &lt;/div&gt;
+                &lt;div&gt;
+                    Footer Element 2
+                &lt;/div&gt;
+                &lt;div&gt;
+                    Footer Element 3
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div&gt;Another Element&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="transitions">
+                <div class="container mt-4 px-2 flex flex-column">
+
+                    <h4>Transitions</h4>
+                    <p class="fw-light">We have created a series of simple transitions that can enhance the interaction
+                        between elements.
+                    </p>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded my-4 code-preview">
+                        <div class="flex-column align-items-center p-3">
+                            <button class="button-round scale-down-hover bg-dark text-light">Scale up and down
+                                hover</button>
+                        </div>
+                        <hr>
+                        <div class="code">
+                            <pre>
+                                <code>
+        &lt;nav class=&quot;navbar bg-light-grey m-3&quot;&gt;
+        &lt;div class=&quot;container navbar-content justify-content-around&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;navbar-brand fw-light fs-2&quot;&gt;
+                Navbar
+            &lt;/a&gt;
+            &lt;ul class=&quot;navbar-nav&quot;&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#nav2&quot;&gt;Item 1&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li class=&quot;dropdown-list&quot;&gt;
+                    &lt;a class=&quot;dropdown-toggler&quot; href=&quot;#nav2&quot;&gt;Dropdown &lt;i class=&quot;arrow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                    &lt;ul class=&quot;dropdown-content&quot;&gt;
+                        &lt;li class=&quot;dropdown-item&quot;&gt;Elemento 1&lt;/li&gt;
+                        &lt;li class=&quot;dropdown-item&quot;&gt;Elemento 2&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#nav2&quot;&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;/nav&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="animations">
+                <div class="h-10vh"></div>
+                <div class="container my-4 px-2 flex flex-column">
+                    <h3>Animations</h3>
+                    <p class="fw-light">To keep things fun, we have included 3 simple animations.</p>
+                    <ul class="ul-inside ms-3 fw-light">
+                        <li>Floating animation</li>
+                        <li>Loading animation</li>
+                        <li>Animated display</li>
+                    </ul>
+                    <div>
+                    </div>
+                    <div
+                        class="flex flex-column mx-auto w-100 align-items-center border border-rounded mt-4 code-preview">
+                        <div class="my-5">
+                            <button class="button-round float-animation">Simple floating animation</button>
+                        </div>
+                        <div class="load my-5">
+                            <hr />
+                            <hr />
+                            <hr />
+                            <hr />
+                        </div>
+                        <div class="mt-5">3 different sizes (s, md, lg)</div>
+                        <div class="display-animation display-animation-s mt-2">
+                            <div class="content__container">
+                                <p class="content__container__text">
+                                    Hello
+                                </p>
+
+                                <ul class="content__container__list">
+                                    <li class="content__container__list__item">world !</li>
+                                    <li class="content__container__list__item">you !</li>
+                                    <li class="content__container__list__item">users !</li>
+                                    <li class="content__container__list__item">everybody !</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="code">
+                            <pre>
+                                <code>
+        &lt;div class=&quot;button-round float-animation&quot;&gt;Simple floating animation&lt;/div&gt;
+        
+        &lt;div class=&quot;load&quot;&gt;
+            &lt;hr/&gt;
+            &lt;hr/&gt;
+            &lt;hr/&gt;
+            &lt;hr/&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;container-animation container-animation-s mt-2&quot;&gt;
+            &lt;div class=&quot;content__container&quot;&gt;
+                &lt;p class=&quot;content__container__text&quot;&gt;
+                    Hello
+                &lt;/p&gt;
+                &lt;ul class=&quot;content__container__list&quot;&gt;
+                    &lt;li class=&quot;content__container__list__item&quot;&gt;world !&lt;/li&gt;
+                    &lt;li class=&quot;content__container__list__item&quot;&gt;you !&lt;/li&gt;
+                    &lt;li class=&quot;content__container__list__item&quot;&gt;users !&lt;/li&gt;
+                    &lt;li class=&quot;content__container__list__item&quot;&gt;everybody !&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+
+    <footer class="flex flex-column w-100 align-items-center">
+        <div class="bg-dark text-light w-100 p-4">
+            <div class="flex justify-content-around">
+                <div>
+                    <div class="fs-3">
+                        LessCSS
+                    </div>
+                    <a href="https://maria1sm.github.io/">
+                        About me
+                    </a>
+                </div>
+                <a href="https://github.com/maria1sm">Github</a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
